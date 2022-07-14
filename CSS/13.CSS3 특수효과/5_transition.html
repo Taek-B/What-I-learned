@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션</title>
+    <style>
+        body {
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            width: 100px;
+            height: 100px;
+            /* transition-property: background-color border-radius height width; */
+            transition-property: all;
+            transition-duration: 5s;
+
+            transition-timing-function: ease-in;
+            /* ease-in : 시작 시 천천히 */
+            /* ease-out : 끝날 때 천천히 */
+
+            transition-delay: 2s;
+            /* 딜레이 시간 */
+
+            /* 단축키워드 - property/duration/timing-function/delay */
+            /* transition: all 3s ease-in-out; */
+        }
+
+        .box:hover {
+            background: red;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

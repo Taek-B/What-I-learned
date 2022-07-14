@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #333;
+        }
+
+        .box {
+            font-size: 200px;
+            width: 200px;
+            height: 200px;
+            background: transparent;
+            position: relative;
+
+            /* 이름 */
+            animation-name: animate2;
+
+            /* 시간 */
+            animation-duration: 2.5s;
+
+            /* 횟수 */
+            /* infinires : 무한대 */
+            animation-iteration-count: infinite;
+
+            /* 마지막 상태 */
+            /* forwards : */
+            /* backwards : */
+            animation-fill-mode: forwards;
+
+
+            /* 진행방향 */
+            /* alternate : 정방향으로 감*/
+            /* reverse : 역방향부터 시작해서 감 */
+            animation-direction: alternate;
+
+        }
+
+        /* 애니메이션 정의 */
+        @keyframes animate1 {
+
+            /* 시작 */
+            0% {
+                transform: translateX(0);
+                background-color: red;
+            }
+
+            /* 끝 */
+            100% {
+                transform: translateX(200%) scale(1.5) rotate(360deg);
+                background-color: blue;
+
+            }
+        }
+
+
+        @keyframes animate2 {
+
+            /* % 방법 */
+            0% {
+                left: 0px;
+                top: 0px;
+                background-color: white;
+                border-radius: 0 0 0 0;
+            }
+
+            25% {
+                left: 300px;
+                top: 0px;
+                background-color: red;
+                border-radius: 50% 0 0 0;
+            }
+
+            50% {
+                left: 300px;
+                top: 300px;
+                background-color: green;
+                border-radius: 50% 50% 0 0;
+            }
+
+            75% {
+                left: 0px;
+                top: 300px;
+                background-color: blue;
+                border-radius: 50% 50% 50% 0;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+                background-color: white;
+                border-radius: 50% 50% 50% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

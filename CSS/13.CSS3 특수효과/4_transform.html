@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼</title>
+    <style>
+        body {
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            width: 300px;
+            height: 300px;
+            /* Transform - rotate, scale, skew */
+
+            /* transform: rotate(25deg); */
+            /* rotate(각도) 회전 */
+
+            /* transform: skew(25deg); */
+            /* skew(각도) : 비슷듬 회전 */
+
+            /* transform: scale(2); */
+            /* scale(배수) 크기 */
+
+            transition: all 1s ease-in-out;
+            /* transition : 변화되는 속도를 지정 */
+
+            transform-origin: bottom right 60px;
+        }
+
+        .box:hover {
+            /* transform: rotate(180deg); */
+            /* transform: skew(25deg) scale(2); */
+            /* border-radius: 50%; */
+            background-color: blue;
+
+            /* transform: translateY(100px); */
+            /* transform: translateX(-100px); */
+            /* translateX 가로이동, Y 세로이동 */
+
+            /* x & y */
+            /* transform: translate(100px, 100px) scale(1.5) rotate(45deg); */
+            /* transform: translate3d(100px, 100px, 100px); */
+
+            /* 한줄에 여러가지 속성을 넣을 수 있음 */
+
+            transform: rotate(45deg) scale(0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
+<!--  
+1 transform / rotate        : 각도 회전
+2 transform / translate     : 함수(X축, Y축)로 이동 가능
+3 transform / scale         : 1보다 큰 수는 확대, 1보다 작은 수는 축소 / 크기를 조정
+4 transform / skew          : 비스듬하게 회전함
+5 transform / origin        : 기준을 지정해줌
+-->
