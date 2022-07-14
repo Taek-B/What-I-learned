@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        /* 더 많은 CSS */
+        html {
+            background-color: #869960;
+        }
+
+        body {
+            font-family: Tahoma, sans-serif;
+            font-size: 87%;
+        }
+
+        .container {
+            width: 940px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #FFF;
+            padding-left: 40px;
+            padding-right: 40px;
+            box-sizing: border-box;
+        }
+
+        header {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #617140;
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: normal;
+            font-size: 165%;
+        }
+
+        header p {
+            margin: 0;
+        }
+
+        .content-area {
+            border-top: 3px solid #e5e9dc;
+            border-bottom: 3px solid #e5e9dc;
+        }
+
+        .main-area {
+            width: 66%;
+            float: left;
+            padding-right: 40px;
+            box-sizing: border-box;
+            /* 기본이 content이기 때문에 박스 크기를 정확하게 주기 위해서 */
+        }
+
+        .sidebar {
+            width: 34%;
+            float: left;
+            background-color: #e5e9dc;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            font-size: 85%;
+        }
+
+        footer {
+            text-align: center;
+            /* 글자 가운데 정렬 */
+            font-size: 85%;
+            color: #999;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .fix {
+            /* 위의 내용들이 플로트 됐을 때  위로 올라감을 방지*/
+            clear: both;
+        }
+
+        /* fix클래스 대신 사용 가능 */
+        /* 플로트 에러방지(플로트를 사용하는 시작지점에 클래스 group 추가) */
+        .group:before,
+        .group:after {
+            content: "";
+            display: table;
+        }
+
+        .group:after {
+            clear: both;
+        }
+
+        .group {
+            zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Website Title</h1>
+            <p>Website slogan included here.</p>
+        </header>
+        <!-- 중간 컨텐츠 시작 -->
+        <div class="contant-area group">
+            <main class="main-area">
+                <p>This is main. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi deleniti quod
+                    numquam?
+                    Quam,
+                    facilis impedit? Quam possimus numquam commodi culpa, corporis blanditiis eaque harum quaerat
+                    ratione
+                    animi
+                    magnam! Quas, a.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quo quam expedita vero adipisci
+                    similique
+                    deleniti fugit maiores odio quas repellat neque, veritatis molestiae accusamus, porro accusantium
+                    temporibus
+                    tempora sapiente!</p>
+            </main>
+            <aside class="sidebar">
+                <p>This is sidebar. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est modi amet
+                    nesciunt
+                    repellendus quis maiores expedita distinctio deserunt fugiat, sit laboriosam aspernatur labore rem
+                    dolore
+                    hic
+                    nulla laborum qui.</p>
+            </aside>
+            <!-- 플로트 에러 방지 -->
+            <!-- <div class="fix"></div> -->
+        </div>
+        <!-- 중간 컨텐츠 끝 -->
+        <footer>
+            <p>&copy; 2021 - This is the footer.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

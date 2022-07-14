@@ -1,0 +1,176 @@
+html {
+    background-color: #869960;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 87%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+header {
+    padding-top: 20px;
+    color: #617140;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 165%;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Site Navigation */
+.site-nav {
+    margin-top: 20px;
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav li {
+    list-style: none;
+    float: left;
+    margin-right: 5px;
+}
+
+.site-nav a {
+    display: block;
+    color: #617140;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid #e5e9dc;
+    border-bottom: none;
+}
+
+.site-nav a:hover {
+    background-color: #e5e9dc;
+}
+
+/* End Site Navigation */
+
+.content-area {
+    border-top: 3px solid #e5e9dc;
+    border-bottom: 3px solid #e5e9dc;
+}
+
+.main-area {
+    width: 66%;
+    float: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+/* 테이블 스타일 */
+table {
+    border-spacing: 0;
+    /* 보더 간격 0 */
+    border-collapse: collapse;
+    /* 보더 합치기 :2줄을 1줄로 합쳐짐 */
+    width: 100%;
+    /* 화면 가능한 길이 */
+}
+
+.col-item-name {
+    width: 60%;
+}
+
+.col-quantity,
+.col-price {
+    width: 20%;
+}
+
+table th {
+    text-align: left;
+    background-color: #869960;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    /* 글자 그림자 */
+}
+
+/* 테이블 모든 열(셀)들 */
+table th,
+table td {
+    border: 1px solid #869960;
+    padding: 10px;
+    vertical-align: top;
+    /* 글자 상하위치를 지정 */
+    /* 글자가 위에 있는 보더(border)에 붙여서 나옴 */
+}
+
+/* 테이블의 짝수 행만 연한 색을 넣기 */
+/* even=짝수, odd=홀수 */
+table tbody tr:nth-child(even) {
+    background-color: #e5e9dc;
+}
+
+/* table tbody tr:nth-child(숫자) {
+    background-color: #acacac;
+} */
+/* 저 숫자에 해당하는 열이 색칠댐 */
+
+/* table tbody tr:last-child {
+    background-color: #acacac;
+}  */
+/* 숫자말고 다른 태그로 첫번째(first) 혹은 마지막(last)을 지정할 수 있음*/
+
+
+/* 마우스를 테이블 행에 올렸을 때 해당 행의 색을 변화 */
+table tbody tr:hover td {
+    background-color: #e6dce9;
+}
+
+
+.sidebar {
+    width: 34%;
+    float: left;
+    background-color: #e5e9dc;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    font-size: 85%;
+}
+
+footer {
+    text-align: center;
+    font-size: 85%;
+    color: #999;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.fix {
+    clear: both;
+}
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+}

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <title>JavaScript 기초 – Part 1</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to top left, #28b487, #7dd56f);
+    }
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 50px;
+      line-height: 1.3;
+      width: 100%;
+      padding: 30px;
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>JavaScript 기초 – Part 1</h1>
+  <script>
+    // f12 -> 콘솔창에 '헬로우월드'라고 뜸
+    // console.log('헬로우월드');
+
+    // 상자가 띄워짐
+    // alert('헬로우');
+
+    //  한줄 주석
+    /*
+    여러줄 주석
+    여러줄 주석
+    */
+
+    // let x; 변수를 두번 선언할 수 없다.
+    // let x = 10;
+    // x = 20;
+    // let x =10;을 선언 후 let x =20;을 선언하면 오류가 생긴다.
+
+    // var y = 10;
+    // var y = 20; // var는 두번 선언 가능
+
+    // 상수(const) : 변하지 않는 수
+    // const z = 77;
+    // z = 7; 상수는 값을 다시 바꿀 수 없다.
+
+    // const COLOR_ORANGE = "#FF7F00";
+    // let color = COLOR_ORANGE;
+    // alert(color);
+
+    // 기본 타입 (Primitive types)
+    // 숫자 Number
+
+    // typeof : 변수의 자료형을 알 수 있다.
+    // typeof 0;
+    // typeof "문자열";
+    // `Hi` != 'Hi'  (둘이 다름)
+    /*
+    let str = "hello"
+    let str22 =`안녕 ${str}`;
+    --> 안녕 hello
+    */
+
+    /*
+    + - / * (사칙연산)
+    % (나누고 남은 수 = 나머지)
+    ** (제곱)
+    */
+
+    // NaN : 숫자가 아님(계산할 수 없음)
+
+    /*
+    숫자형 – 정수, 부동 소수점 숫자 등의 숫자를 나타낼 때 사용합니다. 정수의 한계는 ±253 입니다.
+    문자형 – 빈 문자열이나 글자들로 이뤄진 문자열을 나타낼 때 사용합니다.
+    불린형 – true, false를 나타낼 때 사용합니다.
+    null – null 값만을 위한 독립 자료형입니다. null은 알 수 없는 값을 나타냅니다.
+    undefined – undefined 값만을 위한 독립 자료형입니다. undefined는 할당되지 않은 값을 나타냅니다.
+    객체형 – 복잡한 데이터 구조를 표현할 때 사용합니다.
+    */
+
+    // alert prompt confirm
+    // let age = prompt('나이를 입력해주세요.', 100);
+    // alert(`당신의 나이는 ${age}살 입니다.`);    //// 당신의 나이는 100살입니다
+
+    // let isBoss = confirm('당신이 보스입니까?')
+    // console.log(isBoss)
+    // 확인 -> true , 취소 -> false
+
+    // ****************************************************************
+    // 형 변환 type conversion
+    // 문자열 String(값)
+    // 숫자 Number(문자열 또는 불린)
+    // 불린 Boolean(문자열 또는 숫자) , (0,null,NaN,'')일 경우에만 false
+    // ****************************************************************
+
+    // Number("###") : 숫자형으로 변환
+    // alert( Number("   123   ") ); // 123
+    // alert( Number("123z") );      // NaN ("z"를 숫자로 변환하는 데 실패함)
+    // alert( Number(true) );        // 1
+    // alert( Number(false) );       // 0
+
+    // Boolean("###") : 불린형으로 변환 (참 or 거짓)
+    // alert( Boolean(1) ); // 숫자 1(true)
+    // alert( Boolean(0) ); // 숫자 0(false)
+    // alert( Boolean("hello") ); // 문자열(true)
+    // alert( Boolean("") ); // 빈 문자열(false)
+
+    // 주의 : 문자영"0"은 true입니다.
+
+
+    // 피연산자(=인수) : 연산자가 연산을 수행하는 대상
+    // 단항 연산자 : 피연산자를 하나만 받는 연산자
+    // 이항 연산자 : 두 개의 피연산자를 받는 연산자
+
+
+
+    // 예제1) 아래 코드가 실행된 후, 변수 a, b, c, d엔 각각 어떤 값들이 저장될까요?
+    // let a = 1, b = 1;
+
+    // let c = ++a; // a = 2, c = 2
+    // let d = b++; // d = 1 , b = 2
+
+    // 예제2) 덧셈 고치기
+    // let x1 = prompt("덧셈할 첫 번째 숫자를 입력해주세요.", 1);
+    // let y1 = prompt("덧셈할 두 번째 숫자를 입력해주세요.", 2);
+
+    // alert(x1 + y1); // 12
+    // alert(+x1 + +y1); // 3
+
+    // ****************************************************************
+    // 문자열
+    // let single = '작은따옴표';
+    // let double = "큰따옴표";
+
+    // let backticks = `백틱`;     // 템플릿 리터럴 : 문자열 안에 변수를 넣어줄 수 있음, 표현식 : ${…}
+
+    // string concatenation
+    // let firstName = 'Brandon';
+    // let lastName = 'Sanderson';
+
+    // let fullName = firstName + ' ' + lastName;
+
+    // console.log(fullName);       // 결과값 : Brandon Sanderson
+
+    // getting individual characters
+    // let word = "가나다라"
+    // "가나다라"[0]         //'가'
+    // "가나다라"[1]         //'나'
+    // "가나다라"[2]         //'다'
+    // "가나다라"[3]         //'라'
+    // "가나다라"[4]         //undefined
+
+    // string length
+    // console.log(word.length);     // 문자 길이를 알 수 있다
+
+    // string methods        //영어일 경우만 쓸 수 있다
+    // console.log(fullName.toUpperCase());        // Upper : 대문자
+    // let result = fullName.toLocaleLowerCase();  // Lower : 소문자
+    // console.log(result);
+
+    // let email = 'mario@thenetninja.co.uk';
+
+    // let index = email.indexOf('@');             // indexOf : 문자의 순서를 알려준다
+    // console.log('index of the @ sign:', index);
+
+    // ---------------------------------------------------------------
+
+    // 문자열 메소드
+    // common string methods
+
+    // let email2 = 'hawoon1819@naver.com';
+
+    // let result2 = email2.lastIndexOf('n');     // 결과값 : 11
+    // lastIndexOf(a) : 마지막 a의 위치를 알려준다. (중복이면 가장 마지막 문자를 기준으로 알려준다)
+
+    // let result2 = email2.slice(0, 5);          // 결과값 : hawoo
+    // 문자열.slice(시작, 자를개수) : 설정한 길이만큼 문자열을 잘라서 보여준다
+
+    // let result2 = email2.substr(1, 2);         // 결과값 : awo
+    // 문자열.substr(시작, 끝) : 시작과 끝만큼 문자열을 잘라서 보여준다
+
+    // let result2 = email2.replace('n', 'v');       // 결과값 : hawoov1819@naver.com
+    // 문자열.replace(a, b) : a를 b로 바꿔서 보여준다
+
+    // "           가   나   다    ".trim()          // 결과값 : '가   나   다'
+    // 문자열.trim() : 문자열 사이의 공백은 그대로 두고 앞 뒤에 있는 공백만 잘라서 보여준다
+
+    // console.log(result2);
+
+    // ****************************************************************
+    // 문자열 비교
+
+    // alert('Z' > 'A');     // true
+    /*
+    1)Z가 제일 크다
+    2)길이가 긴 쪽이 크다
+    */
+
+    // === (triple equals) : 값과 타입을 모두 비교
+    // alert( null == undefined ); // true
+    // alert( null === undefined ); // false
+
+
+    // ****************************************************************
+    // if문 : 조건이 true일 때 실행
+
+    // let year = prompt('올해는 몇년도일까요?', '');
+
+    // if (year == 2022) {
+    //   alert('정답입니다!');
+    // } else if (year > 2015) {
+    //   alert('숫자를 좀 더 내려보세요.');
+    // } else {
+    //   alert('숫자를 좀 더 올려보세요.');
+    // }
+
+    // ---------------------------------------------------------------
+
+    /* 예제
+    1. 1에서 100까지 콘솔에 출력합니다.
+    2. 이때 3의 배수이면 숫자 대신에 '삼삼'을 출력하고
+    3. 5의 배수이면 '오오'를 출력합니다.
+    4. 단, 3과 5의 공통 배수이면(예: 15) '삼삼오오'를 출력합니다.
+    */
+
+    // for문 구조
+    // for (begin; condition(조건); step)}{
+    // }
+
+    // for (let i = 1; i <= 100; i++) {
+    //   if (i % 15 == 0) {
+    //     console.log("삼삼오오");
+    //   }
+    //   else if (i % 3 == 0) {
+    //     console.log("삼삼");
+    //   }
+    //   else if (i % 5 == 0) {
+    //     console.log("오오")
+    //   }
+    //   else {
+    //     console.log(i);
+    //   }
+    // }
+
+    // ****************************************************************
+    // 논리 연산자
+    // OR = ||, AND = &&, NOT = ! 을 이용해서 표현한다.
+    // ||는 둘 중에 하나만 맞아도 참
+    // &&는 둘 다 맞아야 참
+
+    // ****************************************************************
+    // 반복문
+
+    // while문
+    // while (condition(=조건)) {
+    //   // 코드
+    //   // '반복문 본문(body)'이라 불림
+    // }
+
+    // do while문
+    // do {
+    //   // 반복문 본문
+    // } while (condition(=조건));
+
+
+    // for문
+    // for (begin(=초기값); condition(=조건); step(=반복 실행 후 실행될 코드)) {
+    //   // ... 반복문 본문 ...
+    // }
+
+
+    // // 무한반복문(for)
+    // for (; ;) {
+    //   // 끊임 없이 본문이 실행됩니다.
+    // }
+
+    // ---------------------------------------------------------------
+
+    // 반복문 빠져나오기 (=break)
+    // let sum = 0;
+
+    // while (true) {
+    //   let value = +prompt("숫자를 입력하세요.", '');
+    //   if (!value) break; // ( false가 되면 break로 반복문이 취소된다. )
+    //   sum += value;
+    // }
+    // alert('합계: ' + sum);
+
+    // ---------------------------------------------------------------
+
+    // 반복으로 넘어가기(계속하기)   (=continue)
+    // for (let i = 0; i < 10; i++) {
+
+    //   // 조건이 참이라면 남아있는 본문은 실행되지 않습니다.
+    //   if (i % 2 == 0) continue;
+
+    //   console.log(i); // 1, 3, 5, 7, 9가 차례대로 출력됨
+    // }
+
+    // ****************************************************************
+    // switch문 : 하나 이상의 case문으로 구성
+    // let a = 4;
+
+    // switch (a) {
+    //   case 3:
+    //     alert('비교하려는 값보다 작습니다.');
+    //     break;
+    //   case 4:
+    //     alert('비교하려는 값과 일치합니다.');
+    //     break;
+    //   case 5:
+    //     alert('비교하려는 값보다 큽니다.');
+    //     break;
+    //   default:
+    //     alert("어떤 값인지 파악이 되지 않습니다.");
+    // }
+
+    // ---------------------------------------------------------------
+
+    // 같은 자료형이어야 case문이 실행된다.
+    // let arg = prompt("값을 입력해주세요.");
+    // switch (arg) {
+    //   case '0':
+    //   case '1':
+    //     alert('0이나 1을 입력하셨습니다.');
+    //     break;
+
+    //   case '2':
+    //     alert('2를 입력하셨습니다.');
+    //     break;
+
+    //   case 3:   // 입력한 값이 문자열이므로 자료형이 달라 인식하지 못한다.
+    //     alert('이 코드는 절대 실행되지 않습니다!');
+    //     break;
+
+    //   default:
+    //     alert('알 수 없는 값을 입력하셨습니다.');
+    // }
+
+    // 과제1(switch문 -> if문)
+    // let browser = prompt("현재 브라우저를 입력하세요");
+
+    // if (browser == "Edge") {
+    //   alert("Edge를 사용하고 계시네요!");
+    // }
+    // else if (browser == ("Chrome" || "Firefox" || "Safari" || "Opera")) {
+    //   alert('저희 서비스가 지원하는 브라우저를 사용하고 계시네요.');
+    // }
+    // else {
+    //   alert('현재 페이지가 괜찮아 보이길 바랍니다!');
+    // }
+
+    // ****************************************************************
+    // 함수 function
+
+    // // <함수 정의>
+    // function 함수이름(매개변수) {
+    //   반환값;
+    // }
+
+    // // <함수호출>
+    // 함수이름(매개변수);
+
+    // 함수 내에서 선언한 변수인 지역 변수(local variable)는 함수 안에서만 접근할 수 있습니다.
+    // 함수 내부에서 함수 외부의 변수인 외부 변수(global variable)에 접근할 수 있습니다. (+수정도 가능)
+
+    // let userName = 'John';
+
+    // function showMessage() {
+    //   userName = "Bob"; // (1) 외부 변수를 수정함
+
+    //   let message = 'Hello, ' + userName;
+    //   alert(message);
+    // }
+
+    // // 1) 외부변수 + 내부변수
+    // alert(userName); // 함수 호출 전이므로 John 이 출력됨
+    // showMessage();
+    // alert(userName); // 함수에 의해 Bob 으로 값이 바뀜
+
+
+    // 2) 외부변수(전역변수 global variable)과 같은 이름의 내부변수(지역변수 local variable)이 있다면 ?
+    // 함수는 내부 변수인 userName만 사용합니다,
+    // showMessage();
+    // alert(userName); // 함수는 외부 변수에 접근하지 않습니다. 따라서 값이 변경되지 않고, John이 출력됩니다.
+
+    // ---------------------------------------------------------------
+
+    // 매개변수
+    // function showMessage(from, text) { // 인수: from, text
+    //   alert(from + ': ' + text);
+    // }
+
+    // showMessage('Ann', 'Hello!'); // Ann: Hello!
+    // showMessage('Ann', "What's up?"); // Ann: What's up?
+
+    // ---------------------------------------------------------------
+
+    // return(반환값)
+    // #return문이 없거나 return만 있는 함수는 undefined를 반환한다.
+    // function add(x,y){
+    //   return x+y;
+    // }
+
+    // add(10,20) // 30이 나온다.
+
+    // ****************************************************************
+
+    // 배열과 객체 : 데이터를 저장하는 자료구조
+    // let fruits = ["사과", "오렌지", "포도"];
+
+    // alert(fruits[0]);     // 사과
+    // alert(fruits[1]);     // 오렌지
+    // alert(fruits[2]);     // 포도
+
+    // alert(fruits.length); // 3
+
+    // ---------------------------------------------------------------
+    // 배열 메소드
+    // 배열.push - add to end
+    // 배열.pop - remove from end
+    // 배열.shift - remove from start
+    // 배열.unshift - add to start
+
+    // let fruits = ["사과", "오렌지", "포도"];
+    // fruits.push("자두");        // 1) push 사용  : 사과, 오렌지, 포도, 자두
+    // fruits.pop();               // 2) pop 사용  : 사과, 오렌지
+    // fruits.shift();             // 3) shift 사용  : 오렌지, 포도
+    // fruits.unshift("복숭아");    // 4) unshift 사용  : 복숭아, 사과, 오렌지, 포도
+    // alert(fruits);
+
+    // ---------------------------------------------------------------
+    // 함수에 반복문
+
+    // let arr = ["사과", "오렌지", "배"];
+
+    // for (let i = 0; i < arr.length; i++) {
+    //   alert(arr[i]);
+    // }
+
+    // ---------------------------------------------------------------
+    // 객체
+
+    // 속성값 읽기
+    // const user = {
+    //   name: "펭수",
+    //   age: 30
+    // }
+
+    // alert (user.age);  // 30
+
+    // ****************************************************************
+
+
+  </script>
+</body>
+
+</html>

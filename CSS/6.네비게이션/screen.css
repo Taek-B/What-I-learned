@@ -1,0 +1,123 @@
+ /* 더 많은 CSS */
+ html {
+     background-color: #869960;
+ }
+
+ body {
+     font-family: Tahoma, sans-serif;
+     font-size: 87%;
+ }
+
+ .container {
+     width: 940px;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: #FFF;
+     padding-left: 40px;
+     padding-right: 40px;
+     box-sizing: border-box;
+ }
+
+ header {
+     padding-top: 20px;
+     padding-bottom: 20px;
+     color: #617140;
+ }
+
+ header h1 {
+     margin: 0;
+     font-weight: normal;
+     font-size: 165%;
+ }
+
+ header p {
+     margin: 0;
+ }
+
+ /* 네비게이션 */
+ .site-nav {
+     margin-top: 20px;
+ }
+
+ .site-nav ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ .site-nav a {
+     display: block;
+     /* a태그가 인라인이므로 블록으로 수정해서 크기적용 */
+     color: #617140;
+     text-decoration: none;
+     /* a태그의 밑줄을 삭제 */
+     padding: 10px 20px;
+     border: 3px solid #e5e9dc;
+     border-bottom: none;
+ }
+
+ .site-nav a:hover {
+     background-color: #e5e9DA;
+ }
+
+ /* hover는 태그에 마우스를 올렸을 때 적용됨 */
+
+ .site-nav li {
+     float: left;
+     margin-right: 5px;
+ }
+
+
+
+ .content-area {
+     border-top: 3px solid #e5e9DA;
+     border-bottom: 3px solid #e5e9DA;
+ }
+
+ .main-area {
+     width: 66%;
+     float: left;
+     padding-right: 40px;
+     box-sizing: border-box;
+     /* 기본이 content이기 때문에 박스 크기를 정확하게 주기 위해서 */
+
+ }
+
+ .sidebar {
+     width: 34%;
+     float: left;
+     background-color: #e5e9dc;
+     padding: 20px 40px;
+     box-sizing: border-box;
+     font-size: 85%;
+ }
+
+ footer {
+     text-align: center;
+     /* 글자 가운데 정렬 */
+     font-size: 85%;
+     color: #999;
+     padding-bottom: 20px;
+     padding-top: 20px;
+ }
+
+ .fix {
+     /* 위의 내용들이 플로트 됐을 때  위로 올라감을 방지*/
+     clear: both;
+ }
+
+ /* fix클래스 대신 사용 가능 */
+ /* 플로트 에러방지(플로트를 사용하는 시작지점에 클래스 group 추가) */
+ .group:before,
+ .group:after {
+     content: "";
+     display: table;
+ }
+
+ .group:after {
+     clear: both;
+ }
+
+ .group {
+     zoom: 1;
+ }

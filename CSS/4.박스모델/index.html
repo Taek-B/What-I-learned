@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        .box-a {
+            background-color: skyblue;
+            /* padding:30px 랑 같다 */
+            padding-top: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            /* 패딩은 내용과 보더와의 간격 */
+
+            /* border: 5px solid red; 와 같이 한줄로 표현가능하지만 밑에 처럼 따로 써도 가능함 */
+            border-width: 10px;
+            /* 보더 굵기 */
+            border-style: dotted;
+            /* dashed : 점선 */
+            /* dotted : 동그라미 점선 */
+            border-color: blue;
+            /* 보더는 박스 가장자리 */
+
+            /* margin: 20px; 랑 같다*/
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            /* 보더 바깥 공간을 마진이라고 함 */
+            /* 박스 위아래 사이 공간이 20px */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-a">박스A</div>
+    <div class="box-a">박스A</div>
+</body>
+
+</html>

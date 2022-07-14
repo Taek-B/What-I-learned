@@ -1,0 +1,21 @@
+/* CSS 문법 적용 */
+body {
+    font-family: cursive;
+}
+
+.male {
+    color: aqua;
+}
+
+ul {
+    list-style: none;
+}
+
+#ceo {
+    background-color: cornflowerblue;
+
+}
+
+h2 {
+    color: blueviolet;
+}

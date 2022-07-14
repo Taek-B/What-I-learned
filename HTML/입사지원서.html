@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입사 지원서</title>
+</head>
+
+<body>
+    <form action="#보낼주소">
+        <h1>입사 지원서</h1>
+
+        <h2>필수 정보</h2>
+        <div id="이름">
+            <label for="name">이름</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="birthday">생년월일</label>
+            <input type="date" id="birthday" required>
+        </div>
+        <div>
+            <label for="gender">성별</label>
+            <select name=gender" id="gender">
+                <option value="male">남</option>
+                <option value="female">여</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="message">
+                <h2>개발자는 왜?</h2>
+            </label>
+            <textarea id="message" cols="50" rows="5"></textarea>
+        </div>
+
+        <div>
+            <label for="coding">
+                <h2>사용해본 것들</h2>
+            </label>
+            <div><input type="checkbox" id="coding">Java</div>
+            <div><input type="checkbox" id="coding">Python</div>
+            <div><input type="checkbox" id="coding">HTML/CSS</div>
+            <div><input type="checkbox" id="coding">JS</div>
+            <div><input type="checkbox" id="coding">Bootstrap</div>
+            <div><input type="checkbox" id="coding">SQL</div>
+        </div>
+
+        <div>
+            <label for="부서">
+                <h2>희망 부서</h2>
+            </label>
+            <div><input type="radio" id="부서">프로트엔드</div>
+            <div></div><input type="radio" id="부서">백엔드
+        </div>
+        <div><input type="radio" id="부서">DB</div>
+        </div>
+
+        <div>
+            <button type="submit">보내기</button>
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>
